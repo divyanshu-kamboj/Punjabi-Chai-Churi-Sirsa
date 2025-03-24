@@ -1,0 +1,273 @@
+html,body{
+    overflow-x: hidden;
+}
+/* css reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+}
+
+/* css variables
+:root{
+    --navbar-height:59px
+}  */
+
+/* navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.50;
+}
+
+/* navigation bar: Logo and Image */
+#logo {
+    margin: 10px 20px;
+}
+
+#logo img {
+    height: 69px;
+    margin: 3px 5px;
+    border-radius: 34px;
+}
+
+/* navigation bar: List styling */
+#navbar ul {
+    display: flex;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+#navbar ul li {
+    /* color: white; */
+    list-style: none;
+    font-size: 1.3rem;
+    margin: 30px 0px;
+}
+
+#navbar ul li a {
+    /* why we give pading in <a> instead of giving in <li> , because if we give hover effect in list<li> then when we come in list padding area then it show hover effect. in this cas when we come our cursor in ancor then it show hover effect */
+    /* border: 2px solid red; */
+    display: block;
+    padding: 3px 22px;
+    color: white;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+    border: 4PX solid black;
+    border-radius: 20px;
+}
+
+/* Home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 200px;
+    margin: 81px 0px;
+    height: 680px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    background-image: url(../image/bg3.jpg);
+    background-size: cover;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 120%;
+    width: 100%;
+    z-index: -2;
+    opacity: 1;
+}
+
+#home p {
+    color: black;
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: "Bree Serif", serif;
+    padding: 12px;
+    align-items: center;
+}
+
+#home h1 {
+    color: black;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+}
+
+/* Services Class */
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 4px solid red;
+    box-shadow: 2px 4px 3px 2px black, inset 2px 4px 3px 3px black;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background-color: #d6d1c9;
+
+}
+
+#services .box img {
+    height: 175px;
+    display: block;
+    /*necessary for margin auto if it is inline element*/
+    margin: auto;
+    border-radius: 102px;
+}
+
+#services .box p {
+    font-family: "Bree Serif", serif;
+}
+
+/* Client section */
+#client-section {
+    /* height: 344px; */
+    position: relative;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background-image: url(../image/bgc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 101%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    display: flex;
+    /* Makes sure the item does not stretch */
+    justify-content: center;
+    align-items: center;
+}
+
+#clients img {
+    border-radius: 100px;
+    margin: 18px;
+    height: auto;
+}
+
+/* Contact section */
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    margin-top: 3px;
+    background-image: url(../image/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 9px;
+    font-size: 1.1rem;
+    font-family: "Bree Serif", serif;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    width: 40%;
+    font-size: 1.3rem;
+    font-family: "Bree Serif", serif;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 9px 10px;
+    height: 41px;
+}
+
+.center img {
+    height: 40px;
+    width: 40px;
+    float: right;
+    border: 4px;
+}
+
+
+/* utility class */
+.h-primary {
+    font-size: 3.8rem;
+    font-family: "Bree Serif", serif;
+    /* padding: 12px; */
+}
+
+.h-secondary {
+    font-size: 2.3rem;
+    font-family: "Bree Serif", serif;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 5px solid black;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.center {
+    text-align: center;
+}
